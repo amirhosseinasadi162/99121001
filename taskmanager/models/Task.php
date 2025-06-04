@@ -22,4 +22,15 @@ class Task {
 
         return $stmt->fetchAll();
     }
+    public function insertTask($user_id, $title, $description, $status)
+{
+    $stmt = $this->pdo->prepare("INSERT INTO tasks (user_id, title, description, status) VALUES (:user_id, :title, :description, :status)");
+    return $stmt->execute([
+        ':user_id' => $user_id,
+        ':title' => $title,
+        ':description' => $description,
+        ':status' => $status
+    ]);
+}
+
 }
