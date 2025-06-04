@@ -1,4 +1,5 @@
 <?php
-require_once '../config/db.php';
+require_once __DIR__ . '/../controllers/TaskController.php';
 
-echo "اتصال با موفقیت برقرار شد!";
+$task = new TaskController();
+$task->index();
