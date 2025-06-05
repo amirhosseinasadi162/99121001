@@ -33,4 +33,29 @@ class Task {
     ]);
 }
 
+public function getTaskById($id)
+{
+    $stmt = $this->pdo->prepare("SELECT * FROM tasks WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetch();
+}
+
+public function updateTask($id, $title, $description, $status)
+{
+    $stmt = $this->pdo->prepare("UPDATE tasks SET title = :title, description = :description, status = :status WHERE id = :id");
+    return $stmt->execute([
+        ':id' => $id,
+        ':title' => $title,
+        ':description' => $description,
+        ':status' => $status
+    ]);
+}
+
+public function deleteTask($id)
+{
+    $stmt = $this->pdo->prepare("DELETE FROM tasks WHERE id = :id");
+    return $stmt->execute([':id' => $id]);
+}
+
+
 }

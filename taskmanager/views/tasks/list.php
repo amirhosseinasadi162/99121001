@@ -36,6 +36,7 @@
                     <tr>
                         <td><?= htmlspecialchars($task['title']) ?></td>
                         <td><?= htmlspecialchars($task['description']) ?></td>
+
                         <td>
                             <?php
                                 switch ($task['status']) {
@@ -46,6 +47,14 @@
                             ?>
                         </td>
                         <td><?= $task['created_at'] ?></td>
+                        <td>
+                            <a href="edit_task.php?id=<?= $task['id'] ?>" class="btn btn-sm btn-outline-primary">ویرایش</a>
+                        </td>
+                        <td>
+                        <a href="delete_task.php?id=<?= $task['id'] ?>"
+                            onclick="return confirm('آیا از حذف این تسک مطمئن هستید؟');"
+                            class="btn btn-sm btn-outline-danger">حذف</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             <?php endif; ?>
