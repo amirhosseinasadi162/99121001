@@ -16,7 +16,7 @@
         <a href="index.php?status=in_progress" class="btn btn-outline-primary">در حال انجام</a>
         <a href="index.php?status=done" class="btn btn-outline-success">انجام شده</a>
         <a href="create_task.php" class="btn btn-success me-2">افزودن تسک جدید</a>
-        <a href="logout.php" class="btn btn-danger float-end">خروج</a>
+        
     </div>
 
     <table class="table table-bordered">
@@ -51,7 +51,7 @@
             <?php endif; ?>
         </tbody>
     </table>
+    <a href="logout.php" class="btn btn-danger float-end">خروج</a>
 </div>
-
 </body>
 </html>
