@@ -26,6 +26,10 @@
         </div>
 
         <button type="submit" class="btn btn-primary">ورود</button>
+        <div class="mt-3 text-center">
+            <span>حساب کاربری ندارید؟</span>
+            <a href="register.php" class="btn btn-sm btn-outline-primary ms-2">ثبت‌نام</a>
+        </div>
     </form>
 </div>
 
